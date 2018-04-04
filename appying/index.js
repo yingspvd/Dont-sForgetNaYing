@@ -42,7 +42,8 @@ app.get('/score:name' , function(req , res)
 {
     console.log(req.params.name);
     res.render('score' , {
-        name : req.params.name
+        name : req.params.name,
+        score : req.params.score
     });
 });
 
