@@ -1,0 +1,145 @@
+/*set center button*/
+body
+{
+    margin-top: 150px;
+    text-align: center;
+    background-color: rgb(120, 250, 222);
+}
+
+a{
+    text-decoration: inherit;
+}
+
+/*กล่องQuestion*/
+.containerQuestion
+{
+    width: 800px;
+    height: 400px;
+    text-align: center;
+    background-color: rgba(4, 199, 166,0.8);
+    border-radius: 4px;
+    margin: 0 auto;
+   
+}
+
+.containerQuestion img
+{
+    width: 230px;
+    height: 177px;
+    margin-top: -60px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.font-Q
+{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+    margin-bottom: 20px;
+
+}
+
+.font-question
+{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+    margin-bottom: 20px;
+
+}
+
+/*กล่องกรอกชื่อ*/
+input[type="text"]
+{
+    height: 45px;
+    width: 300 px;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    
+    margin-bottom: 50px;
+    padding-bottom: 50;
+    background-color: rgb(255, 255, 255);
+    padding-left:50px;
+
+}
+
+
+.font-input::before
+{
+    content: "";
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    padding-left: 5px;
+    color: black;
+    padding-top: 7px;
+}
+
+
+/*กล่องitem*/
+.containerSmall
+{
+    width: 120px;
+    height: 50px;
+
+    text-align: center;
+
+    background-color: rgba(4, 199, 166,0.8);
+    border-radius: 10px;
+
+    margin: 0 auto;
+   
+    margin-left: 50px;
+   
+}
+
+/*LoginButton*/
+.btn-submit
+{
+    padding: 15px 30px;
+    color: rgb(97, 83, 3);
+
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+    border-radius: 4px;
+    border: none;
+    border-bottom: 4px solid #dfac05;
+
+    background-color: rgb(252, 219, 35);
+    
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+}
+
+
+.btn-submit:hover
+{
+    background-color:rgb(250, 197, 25);
+
+}
+
+/*fontข้อ เวลา*/
+.itemTime
+{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+/*โจทย์*/
+.titleQue
+{
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+
+    margin-top:30px;
+
+}

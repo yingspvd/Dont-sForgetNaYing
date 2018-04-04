@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+         
+        <% include ./components/header %>
+         <link rel="stylesheet" type="text/css" href="css/styleQue.css"> </link>
+      
+    </head>
+
+    <body>
+        <input type="hidden" value="<%= name %>" id="player">
+         <!-----ขอบบน---->
+        <div class="containerHead">
+            <div align="center"></div>
+            <br>
+            <div class="itemTime" id="time">
+                01 : 30
+            </div>
+
+        </div>
+
+
+        <!----ขอบล่าง---->
+        <div class="footer"></div>
+
+        <!----LOGO---->
+        <div class = "logo">
+            <img src = "image/logo-02.png">
+        </div>
+        
+        
+        <!----Question---->
+        <div class="containerQuestion">
+            <div align="center"></div>
+            <br><br>
+            <div class="font-Q" id="question">
+                Q
+            </div>
+            <br>
+            <div class="font-question" id="quiz">
+                quiz
+            </div>
+            
+            
+            <!----FILL ANSWER---->
+            <div class="form-input">
+                <input type="text" id="AnswerFill"
+                placeholder="Your answer"
+                required disabled autofocus>
+            </div> 
+            
+            <!----Submit BTN---->
+            <button type="button" class="btn-submit" onclick="checkAnswer()" >Submit</button>
+
+        </div>
+
+        <script src="js/quiz.js"></script>
+    </body>
+</html>

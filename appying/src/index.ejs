@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <% include ./components/header %>
+        <link rel="stylesheet" type="text/css" href="css/style.css"></link>
+    </head>
+    <body>
+        <div class = "container">
+                <img src = "image/logo-02.png">
+            <form>
+                <div><a href="/start" class="btn-click" onclick="init_db()">Judger</a></div>
+                <br><br><br><br>
+                <div><a href="/player" class="btn-click">Player</a></div>
+            </form>
+        </div>
+        <script>
+            var db = firebase.database();
+            function init_db() {
+                db.ref('judger').set({
+                    start: false
+                });
+            }
+        </script>
+    </body>
+</html>

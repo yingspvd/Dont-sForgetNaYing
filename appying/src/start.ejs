@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include ./components/header %>
+        <link rel="stylesheet" type="text/css" href="css/style.css"> </link>
+    </head>
+    <body>
+        <div class = "containerLogo">
+            <img src = "image/logo-02.png">
+            <div align="center"></div>
+            <a href="#" class="clickButton" onclick="start()"> Start now </a>
+        </div>
+
+        <script>
+                var db = firebase.database();
+                function start() {
+                    db.ref('judger').set({
+                        start: true
+                    });
+                }
+            </script>
+    </body>
+</html>

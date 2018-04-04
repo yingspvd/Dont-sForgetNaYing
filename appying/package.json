@@ -1,0 +1,20 @@
+{
+  "name": "appying",
+  "version": "1.0.0",
+  "description": "Math Adventure (Ying's App)",
+  "main": "index.js",
+  "scripts": {
+    "start": "cls && nodemon index.js"
+  },
+  "author": "N'Ying",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.8",
+    "express": "^4.16.3",
+    "firebase": "^4.12.1",
+    "socket.io": "^2.1.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.0"
+  }
+}
