@@ -4,7 +4,8 @@ var btn = document.getElementById('btn');
 function savePlayer() {
     var userName = document.getElementById('player').value;
 
-    if(userName != "") {
+    if(userName != "") 
+    {
         db.ref('player/' + userName).set({
             score: 0
         });
