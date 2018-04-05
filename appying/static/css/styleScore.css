@@ -112,6 +112,8 @@ input[type="text"]
     border: none;
     border-bottom: 4px solid #dfac05;
 
+    margin-top: 20px;
+
     background-color: rgb(252, 219, 35);
     
     -webkit-transition-duration: 200ms;

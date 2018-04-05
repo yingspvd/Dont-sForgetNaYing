@@ -144,10 +144,11 @@ input[type="text"]
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
     
+    text-align: center;
+
     margin-bottom: 30px;
 
     padding-bottom: 50;
-    padding-left:50px;
 
     background-color: rgb(255, 255, 255);
     
