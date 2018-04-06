@@ -24,10 +24,17 @@ var quiz = ["4 x 8 + (5 x 7 x 2)" ,
             "15 x 8 - 9 + 6",
             "14 x 13 + 12 - 11",
             "(90 x 15 ÷ (15 x 6))",
-            "(9 x (12 ÷ 6(12)) ÷ 3)"
+            "(9 x (12 ÷ 6(12)) ÷ 3)",
+            "58 x 2 + (198 + 13)",
+            "72 + 56 + 55 -12",
+            "( 98 x 5 ) ÷ 7 + 42 ",
+            "32 x 6 + 9 ÷ 9 x 0",
+            "36 x 36 x 0 x 9 x 25 x 4",
+            "788 ÷ 2 + 6 - 200",
+            "23 + 89 + 122 - 89"
            ];
 
-var arAnswer = [102 , 562, 168, 387,197,132,373,117,183,540,18];
+var arAnswer = [102,562,168,387,197,132,373,117,183,540,18,327,171,112,0,0,200,145];
 var rdQuiz; //random ข้อ
 var answer; //คำตอบของข้อที่แรนดอมมา
 
@@ -113,13 +120,16 @@ function checkAnswer()
     
 }
 
-firebase.database().ref().child('judger/start').on('value' , snap => {
+firebase.database().ref().child('judger/start').on('value' , snap => 
+{
     if( snap.val() == true ) {
         document.getElementById('AnswerFill').removeAttribute('disabled');
 
-        function startTimer(duration, display) {
+        function startTimer(duration, display) 
+        {
             var timer = duration, minutes, seconds;
-            setInterval(function () {
+            setInterval(function () 
+            {
                 minutes = parseInt(timer / 60, 10)
                 seconds = parseInt(timer % 60, 10);
         
@@ -134,13 +144,26 @@ firebase.database().ref().child('judger/start').on('value' , snap => {
             }, 1000);
         }
         
-        var fiveMinutes = 60 * 1.5,
+        var fiveMinutes = 60 * 3,
         display = document.querySelector('#time');
         startTimer(fiveMinutes, display);
     } 
     
     else 
     {
+        window.location.href = "http://localhost:8000/" ;
+        fb.child('player').remove();
+
+        var db = firebase.database();
+        function start() 
+        {
+            db.ref('judger').set(
+            {
+                start: true
+            });
+        }
+
+        console.log("Time Out")
         //document.getElementById('AnswerFill').classList.add('hide');
     }
 });

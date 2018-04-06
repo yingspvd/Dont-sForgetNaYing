@@ -2,15 +2,23 @@
 <html>
     <head>
         <% include ./components/header %>
+
         <link rel="stylesheet" type="text/css" href="css/style.css"> </link>
     </head>
     <body>
+        
+            <input type="hidden" value="<%= name %>" id="player">
+
         <div class = "container">
             <img src = "image/logo-02.png">
+        <div  class="font-wait">
             <div align="center">
-                <div><a class="btn-click">Waiting ...</a></div>
+                <div><a >Waiting ...</a></div>
             </div>
+        </div>
             
-    </div>
+        
+        </div>
+        <script src="js/wait.js"></script>
     </body>
 </html>

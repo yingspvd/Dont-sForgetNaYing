@@ -7,7 +7,7 @@ var scoreWin; //คะแนนสูงสุด
 var score ;
 
 var ref = firebase.database().ref().child('player/'+name+'/score');
-
+var fb = firebase.database().ref()
 //ShowScore
 var scoreBoard = firebase.database().ref('player').once('value').then(function(snapshot) {
 var player = snapshot.val()
@@ -35,6 +35,16 @@ var player = snapshot.val()
 function goPlayAgain()
 {
     window.location.href = "http://localhost:8000/" ;
+    fb.child('player').remove();
+
+    var db = firebase.database();
+    function start() 
+    {
+        db.ref('judger').set(
+        {
+            start: true
+        });
+    }
 }
 
 

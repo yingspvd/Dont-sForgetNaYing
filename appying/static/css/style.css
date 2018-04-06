@@ -79,7 +79,17 @@ a{
 
 }
 
+.font-wait
+{
+    width: 500px;
+    height: 400px;
+    
+    margin-bottom: 100px;
 
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
 /*------------YellowButton---------*/
 /*Button*/
 .btn-click

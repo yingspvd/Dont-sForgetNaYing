@@ -9,8 +9,8 @@ function savePlayer() {
         db.ref('player/' + userName).set({
             score: 0
         });
-    
-        window.location.href = "http://localhost:8000/quiz" + userName;
+        window.location.href = "http://localhost:8000/wait" + userName;
+        //window.location.href = "http://localhost:8000/quiz" + userName;
     } else {
         window.location.href = "http://localhost:8000/player"
     }

@@ -25,15 +25,19 @@ app.get('/start' , function(req , res)
     res.render('start');
 });
 
-app.get('/wait' , function(req , res) 
+app.get('/wait:name' , function(req , res) 
 {
-    res.render('wait');
+    res.render('wait' , 
+    {
+        name : req.params.name
+    });
 });
 
 app.get('/quiz:name' , function(req , res) 
 {
     console.log(req.params.name);
-    res.render('quiz' , {
+    res.render('quiz' , 
+    {
         name : req.params.name
     });
 });
@@ -41,7 +45,8 @@ app.get('/quiz:name' , function(req , res)
 app.get('/score:name' , function(req , res) 
 {
     console.log(req.params.name);
-    res.render('score' , {
+    res.render('score' , 
+    {
         name : req.params.name,
         score : req.params.score
     });
