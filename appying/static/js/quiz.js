@@ -138,13 +138,17 @@ firebase.database().ref().child('judger/start').on('value' , snap =>
         
                 display.textContent = minutes + ":" + seconds;
         
-                if (--timer < 0) {
-                    timer = duration;
+                if (--timer < 0) 
+                {
+                    window.location.href = "http://localhost:8000/score" + name;
+                   // clearInterval(intervalId);
+                    //timer = duration;
+                    console.log("Time Out")
                 }
             }, 1000);
         }
         
-        var fiveMinutes = 60 * 3,
+        var fiveMinutes = 60 * 0.15,
         display = document.querySelector('#time');
         startTimer(fiveMinutes, display);
     } 
@@ -163,7 +167,7 @@ firebase.database().ref().child('judger/start').on('value' , snap =>
             });
         }
 
-        console.log("Time Out")
+       // console.log("Time Out")
         //document.getElementById('AnswerFill').classList.add('hide');
     }
 });
