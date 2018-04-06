@@ -79,9 +79,7 @@ function checkAnswer()
     var check = 0;
     var ansfill = document.getElementById('AnswerFill').value;
 
-    if(item <= 2) 
-    {
-        if(ansfill == answer)
+     if(ansfill == answer)
         {
             console.log("Correct");
             item++;
@@ -110,13 +108,7 @@ function checkAnswer()
         {
             console.log("Wrong");
         }
-    } 
     
-    else 
-    {
-        window.location.href = "http://localhost:8000/score" + name;
-     
-    }
     
 }
 
