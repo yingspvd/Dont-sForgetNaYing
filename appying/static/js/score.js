@@ -4,10 +4,19 @@ var btn = document.getElementById('btn');
 var name = document.getElementById('player').value;
 var whoWin; //ชื่อคนชนะ
 var scoreWin; //คะแนนสูงสุด
+var myScore; //คะแนนที่ได้
 var score ;
 
-var ref = firebase.database().ref().child('player/'+name+'/score');
+var ref = firebase.database().ref('player/'+name);
+ref.once('value').then(function(snapshot)
+{
+    myScore=snapshot.child('score').val();
+    console.log("myScore"+myScore)
+
+    document.getElementById('myScore').innerHTML = "Your Score : "+myScore
+})
 var fb = firebase.database().ref()
+
 //ShowScore
 var scoreBoard = firebase.database().ref('player').once('value').then(function(snapshot) {
 var player = snapshot.val()
